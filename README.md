@@ -1,5 +1,9 @@
 # atmo-mem
 
+[![CI](https://github.com/bayuh85/atmo-mem/actions/workflows/ci.yml/badge.svg)](https://github.com/bayuh85/atmo-mem/actions/workflows/ci.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/bayuh85/atmo-mem.svg)](https://pkg.go.dev/github.com/bayuh85/atmo-mem)
+[![License: MIT](https://img.shields.io/github/license/bayuh85/atmo-mem)](https://github.com/bayuh85/atmo-mem/blob/main/LICENSE)
+
 Persistent cross-session memory for coding agents, in one static binary.
 
 atmo-mem speaks the [Model Context Protocol](https://modelcontextprotocol.io) over stdio. An agent saves decisions, bugfixes, and facts while it works. A later session searches and recalls them from a local SQLite database. At the end of a session, atmo-mem can compress the notes into a summary with any OpenAI-compatible model.
@@ -15,7 +19,7 @@ Inspired by [claude-mem](https://github.com/thedotmack/claude-mem) and [engram](
 ### From source
 
 ```bash
-go install github.com/atmorouter/atmo-mem/cmd/atmo-mem@latest
+go install github.com/bayuh85/atmo-mem/cmd/atmo-mem@latest
 ```
 
 Put `$(go env GOPATH)/bin` on your `PATH` if it is not already.
@@ -23,7 +27,7 @@ Put `$(go env GOPATH)/bin` on your `PATH` if it is not already.
 Or build it in a checkout:
 
 ```bash
-git clone https://github.com/atmorouter/atmo-mem.git
+git clone https://github.com/bayuh85/atmo-mem.git
 cd atmo-mem
 CGO_ENABLED=0 go build -o atmo-mem ./cmd/atmo-mem
 ```

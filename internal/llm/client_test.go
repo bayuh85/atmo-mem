@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/atmorouter/atmo-mem/internal/llm"
+	"github.com/bayuh85/atmo-mem/internal/llm"
 )
 
 func TestCompleteSendsOpenAIShape(t *testing.T) {

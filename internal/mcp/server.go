@@ -15,7 +15,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/atmorouter/atmo-mem/internal/memory"
+	"github.com/bayuh85/atmo-mem/internal/memory"
 )
 
 const (

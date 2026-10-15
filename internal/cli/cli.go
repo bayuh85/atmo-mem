@@ -13,12 +13,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/atmorouter/atmo-mem/internal/config"
-	"github.com/atmorouter/atmo-mem/internal/llm"
-	"github.com/atmorouter/atmo-mem/internal/mcp"
-	"github.com/atmorouter/atmo-mem/internal/memory"
-	"github.com/atmorouter/atmo-mem/internal/store"
-	"github.com/atmorouter/atmo-mem/internal/version"
+	"github.com/bayuh85/atmo-mem/internal/config"
+	"github.com/bayuh85/atmo-mem/internal/llm"
+	"github.com/bayuh85/atmo-mem/internal/mcp"
+	"github.com/bayuh85/atmo-mem/internal/memory"
+	"github.com/bayuh85/atmo-mem/internal/store"
+	"github.com/bayuh85/atmo-mem/internal/version"
 )
 
 const usage = `atmo-mem is persistent memory for coding agents.

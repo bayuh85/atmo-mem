@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/atmorouter/atmo-mem/internal/cli"
+	"github.com/bayuh85/atmo-mem/internal/cli"
 )
 
 func isolateEnv(t *testing.T) {

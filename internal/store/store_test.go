@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/atmorouter/atmo-mem/internal/store"
+	"github.com/bayuh85/atmo-mem/internal/store"
 )
 
 func testStore(t *testing.T) *store.Store {

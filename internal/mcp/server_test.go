@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/atmorouter/atmo-mem/internal/llm"
-	"github.com/atmorouter/atmo-mem/internal/mcp"
-	"github.com/atmorouter/atmo-mem/internal/memory"
-	"github.com/atmorouter/atmo-mem/internal/store"
+	"github.com/bayuh85/atmo-mem/internal/llm"
+	"github.com/bayuh85/atmo-mem/internal/mcp"
+	"github.com/bayuh85/atmo-mem/internal/memory"
+	"github.com/bayuh85/atmo-mem/internal/store"
 )
 
 func startServer(t *testing.T, model llm.Completer) *rpcClient {

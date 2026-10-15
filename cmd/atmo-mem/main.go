@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/atmorouter/atmo-mem/internal/cli"
+	"github.com/bayuh85/atmo-mem/internal/cli"
 )
 
 func main() {

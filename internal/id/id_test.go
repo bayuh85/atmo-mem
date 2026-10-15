@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/atmorouter/atmo-mem/internal/id"
+	"github.com/bayuh85/atmo-mem/internal/id"
 )
 
 func TestNew(t *testing.T) {

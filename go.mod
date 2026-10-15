@@ -1,4 +1,4 @@
-module github.com/atmorouter/atmo-mem
+module github.com/bayuh85/atmo-mem
 
 go 1.22.2
 

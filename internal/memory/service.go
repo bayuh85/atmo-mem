@@ -11,8 +11,8 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/atmorouter/atmo-mem/internal/llm"
-	"github.com/atmorouter/atmo-mem/internal/store"
+	"github.com/bayuh85/atmo-mem/internal/llm"
+	"github.com/bayuh85/atmo-mem/internal/store"
 )
 
 const (

@@ -6,8 +6,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/atmorouter/atmo-mem/internal/memory"
-	"github.com/atmorouter/atmo-mem/internal/store"
+	"github.com/bayuh85/atmo-mem/internal/memory"
+	"github.com/bayuh85/atmo-mem/internal/store"
 )
 
 type tool struct {
