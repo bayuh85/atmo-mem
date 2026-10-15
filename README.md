@@ -12,6 +12,8 @@ Save, search, and recall stay on disk. Only `session_summarize` calls the networ
 
 Inspired by [claude-mem](https://github.com/thedotmack/claude-mem) and [engram](https://github.com/Gentleman-Programming/engram).
 
+Works out of the box with [AtmoRouter](https://atmorouter.dev), an affordable OpenRouter alternative.
+
 ## Install
 
 `atmo-mem` is a single binary. SQLite is compiled in, so you do not need CGO or a system SQLite library.
@@ -194,11 +196,9 @@ Memories live in one SQLite file. An FTS5 index (`unicode61`) is maintained by t
 
 Sessions are bookkeeping rows. The summary the next session actually reads is a normal memory with kind `summary`.
 
-## Powered by AtmoRouter
+## Powered by AtmoRouter, a cheap AI API gateway and OpenRouter alternative
 
-Session summarization defaults to [AtmoRouter](https://atmorouter.dev). Out of the box, atmo-mem posts to `https://atmorouter.dev/v1/chat/completions` with model `zai/glm-5.3`.
-
-Set `ATMO_MEM_API_KEY` to a key from AtmoRouter. To use another host — OpenAI, a local server, or any compatible gateway — set `ATMO_MEM_BASE_URL` (include `/v1`) and `ATMO_MEM_MODEL`. The client sends `Authorization: Bearer <key>` and a standard chat-completions body (`model`, `messages`, `temperature`, `max_tokens`).
+Session summarization defaults to AtmoRouter (`https://atmorouter.dev/v1`, model `zai/glm-5.3`); set `ATMO_MEM_BASE_URL` and `ATMO_MEM_MODEL` to use any other OpenAI-compatible host. [AtmoRouter](https://atmorouter.dev) is a [cheap AI API gateway](https://atmorouter.dev) that speaks both the OpenAI Chat Completions API and the Anthropic Messages API, so one key reaches 100+ models from Cursor, Cline, Claude Code, or any compatible client. It is pay-per-token with no subscription, accepts QRIS and USDC, and prices sit well below official rates: AtmoRouter advertises an average of 83.7% below official prices, which makes it an affordable LLM API and a practical OpenRouter alternative for agent workloads.
 
 ## Development
 
