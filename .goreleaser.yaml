@@ -1,0 +1,45 @@
+# Release config for https://goreleaser.com
+# Tagged release: goreleaser release --clean
+# Local snapshot: goreleaser release --snapshot --clean
+version: 2
+
+project_name: atmo-mem
+
+builds:
+  - id: atmo-mem
+    main: ./cmd/atmo-mem
+    binary: atmo-mem
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X github.com/atmorouter/atmo-mem/internal/version.Version={{ .Version }}
+    flags:
+      - -trimpath
+    mod_timestamp: "{{ .CommitTimestamp }}"
+
+archives:
+  - formats: [tar.gz]
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+
+checksum:
+  name_template: checksums.txt
+
+snapshot:
+  version_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"

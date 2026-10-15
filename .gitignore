@@ -1,0 +1,9 @@
+/atmo-mem
+/atmo-mem.exe
+/dist/
+*.db
+*.db-wal
+*.db-shm
+.env
+.idea/
+.vscode/
